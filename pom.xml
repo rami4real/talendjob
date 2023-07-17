@@ -163,24 +163,6 @@
       <version>8.0.1</version>
     </dependency>
   </dependencies>
-  <build>
-    <finalName>${talend.job.finalName}</finalName>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.10.1</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.liquibase</groupId>
-        <artifactId>liquibase-maven-plugin</artifactId>
-        <version>4.23.0</version>
-      </plugin>
-    </plugins>
-  </build>
   <profiles>
     <profile>
       <id>packaging-and-assembly</id>
