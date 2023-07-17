@@ -6,6 +6,13 @@
   <artifactId>simple</artifactId>
   <version>0.1.0</version>
   <name>LOCAL_PROJECT simple-0.1.0 (0.1,Jobs)</name>
+      <repositories>
+    <repository>
+        <id>talend</id>
+        <name>Talend Repository</name>
+        <url>https://artifacts-oss.talend.com/nexus/content/repositories/releases/</url>
+    </repository>
+</repositories>
   <properties>
     <talend.job.type>Standard</talend.job.type>
     <talend.job.date>${maven.build.timestamp}</talend.job.date>
@@ -36,13 +43,7 @@
     <talend.job.finalName>simple_0_1</talend.job.finalName>
     <maven.build.timestamp>20230717143833</maven.build.timestamp>
   </properties>
-    <repositories>
-    <repository>
-        <id>talend</id>
-        <name>Talend Repository</name>
-        <url>https://artifacts-oss.talend.com/nexus/content/repositories/releases/</url>
-    </repository>
-</repositories>
+  
 
   <dependencies>
     <dependency>
