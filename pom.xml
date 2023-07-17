@@ -15,7 +15,7 @@
     <talend.job.path>local_project</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
-    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8</talend.job.jvmargs>
     <talend.job.id>_RDrOQCFXEe6Uj_Uew4zVDw</talend.job.id>
     <talend.job.version>0.1</talend.job.version>
     <talend.job.framework></talend.job.framework>
@@ -34,6 +34,7 @@
     <current.bundle.resources.dir>${basedir}/src/main/bundle-resources</current.bundle.resources.dir>
     <talend.job.name>simple</talend.job.name>
     <talend.job.finalName>simple_0_1</talend.job.finalName>
+    <maven.build.timestamp>20230717143833</maven.build.timestamp>
   </properties>
   <dependencies>
     <dependency>
@@ -42,8 +43,8 @@
       <version>0.31.12</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -53,8 +54,8 @@
       <version>2.1.3</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -64,8 +65,8 @@
       <version>2.0.12.Final</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -75,8 +76,8 @@
       <version>1.3.1-patch-20190523</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -86,8 +87,8 @@
       <version>4.21.0</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -97,8 +98,8 @@
       <version>2.13.2</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -108,8 +109,8 @@
       <version>2.13.2</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -119,8 +120,8 @@
       <version>2.13.2</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -130,8 +131,8 @@
       <version>1.7.29</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -141,8 +142,8 @@
       <version>1.1</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -152,8 +153,8 @@
       <version>1.0.0</version>
       <exclusions>
         <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
+          <groupId>groupId-to-exclude</groupId>
+          <artifactId>artifactId-to-exclude</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -404,11 +405,27 @@
           </plugin>
         </plugins>
       </build>
-      <properties>
-        <microservice.configs.dir>${current.resources.dir}/</microservice.configs.dir>
-        <contexts.running.dir>${current.resources.dir}/</contexts.running.dir>
-        <microservice.running.configs.dir>${current.int-resources.dir}/</microservice.running.configs.dir>
-      </properties>
+    </profile>
+    <profile>
+      <id>include-bean-validation-dependencies</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.talend.components</groupId>
+            <artifactId>bean-validator-maven-plugin</artifactId>
+            <version>1.0.0</version>
+            <executions>
+              <execution>
+                <id>process</id>
+                <phase>process-resources</phase>
+                <goals>
+                  <goal>process</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
 </project>
