@@ -240,16 +240,6 @@
             </dependencies>
           </plugin>
         </plugins>
-    <plugin>
-      <groupId>org.talend.ci</groupId>
-      <artifactId>signer-maven-plugin</artifactId>
-      <version>1.0.0</version>
-      <!-- Other configuration for the plugin -->
-    </plugin>
-    <!-- Other plugins -->
-  </plugins>
-  <!-- Other build configurations -->
-</build>
       </build>
     </profile>
     <profile>
