@@ -36,6 +36,14 @@
     <talend.job.finalName>simple_0_1</talend.job.finalName>
     <maven.build.timestamp>20230717143833</maven.build.timestamp>
   </properties>
+    <repositories>
+    <repository>
+        <id>talend</id>
+        <name>Talend Repository</name>
+        <url>https://artifacts-oss.talend.com/nexus/content/repositories/releases/</url>
+    </repository>
+</repositories>
+
   <dependencies>
     <dependency>
       <groupId>org.talend.daikon</groupId>
