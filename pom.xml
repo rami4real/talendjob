@@ -46,7 +46,5 @@
             </pluginRepositories>
         </profile>        
     </profiles>
-    <activeProfiles>
-        <activeProfile>talend-ci</activeProfile>
-    </activeProfiles>
+
 </settings>
