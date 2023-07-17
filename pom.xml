@@ -240,6 +240,16 @@
             </dependencies>
           </plugin>
         </plugins>
+    <plugin>
+      <groupId>org.talend.ci</groupId>
+      <artifactId>signer-maven-plugin</artifactId>
+      <version>1.0.0</version>
+      <!-- Other configuration for the plugin -->
+    </plugin>
+    <!-- Other plugins -->
+  </plugins>
+  <!-- Other build configurations -->
+</build>
       </build>
     </profile>
     <profile>
@@ -250,6 +260,7 @@
       <properties>
         <talend.libraries.excludes.set>*:*</talend.libraries.excludes.set>
         <talend.jobs.excludes.set>*:*</talend.jobs.excludes.set>
+    <signer.version>7.1.1</signer.version>
       </properties>
     </profile>
     <profile>
