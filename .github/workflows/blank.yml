@@ -17,7 +17,6 @@ on:
 jobs:
   # This workflow contains a single job called "build"
   build:
-  build:
     runs-on: self-hosted
     steps:
       - name: Checkout code
