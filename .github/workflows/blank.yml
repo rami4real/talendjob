@@ -12,4 +12,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Execute Talend job
-        run: ./simple/simple_run.sh
+        run: ./simple/simple_run.bat
