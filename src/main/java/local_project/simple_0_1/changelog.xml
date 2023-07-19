@@ -3,7 +3,7 @@
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd"
-                   logicalFilePath="C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\src\main\resources">
+                   logicalFilePath="C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\src\main\java\local_project\simple_0_1">
 
 
      <changeSet id="gittt" author="tt">
