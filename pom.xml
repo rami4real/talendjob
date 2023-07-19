@@ -20,7 +20,6 @@
     <talend.job.id>_RDrOQCFXEe6Uj_Uew4zVDw</talend.job.id>
     <talend.job.version>0.1</talend.job.version>
     <talend.job.framework></talend.job.framework>
-    <talend.routine.groupid>org.example.local_project.code</talend.routine.groupid>
     <current.int-resources.dir>${basedir}/src/main/resources</current.int-resources.dir>
     <current.resources.dir>${basedir}/src/main/ext-resources</current.resources.dir>
     <talend.project.name.lowercase>local_project</talend.project.name.lowercase>
@@ -38,17 +37,6 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>org.talend.daikon</groupId>
-      <artifactId>crypto-utils</artifactId>
-      <version>0.31.12</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
       <groupId>org.dom4j</groupId>
       <artifactId>dom4j</artifactId>
       <version>2.1.3</version>
@@ -63,17 +51,6 @@
       <groupId>org.jboss.marshalling</groupId>
       <artifactId>jboss-marshalling</artifactId>
       <version>2.0.12.Final</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>net.sourceforge.jtds</groupId>
-      <artifactId>jtds</artifactId>
-      <version>1.3.1-patch-20190523</version>
       <exclusions>
         <exclusion>
           <artifactId>*</artifactId>
@@ -135,33 +112,6 @@
           <groupId>*</groupId>
         </exclusion>
       </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.components.lib</groupId>
-      <artifactId>talend_file_enhanced</artifactId>
-      <version>1.1</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.talend.components</groupId>
-      <artifactId>talendcsv</artifactId>
-      <version>1.0.0</version>
-      <exclusions>
-        <exclusion>
-          <artifactId>*</artifactId>
-          <groupId>*</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>org.example.local_project.code</groupId>
-      <artifactId>routines</artifactId>
-      <version>8.0.1</version>
     </dependency>
   </dependencies>
   <build>
