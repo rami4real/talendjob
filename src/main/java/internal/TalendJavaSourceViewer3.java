@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 
 @SuppressWarnings("unused")
 
-public class TalendJavaSourceViewer2 {
+public class TalendJavaSourceViewer3 {
 	private static java.util.Properties context = new java.util.Properties();
 	private static final java.util.Map<String, Object> globalMap = new java.util.HashMap<String, Object>();
 	public void myFunction(){
@@ -29,7 +29,7 @@ public class TalendJavaSourceViewer2 {
         String password = "root";
              try (Connection connection = DriverManager.getConnection(jdbcUrl,username,password);
              Statement statement = connection.createStatement()) {
-            Liquibase li=new Liquibase("changelog.xml",new ClassLoaderResourceAccessor(), DatabaseFactory.getInstance().findCorrectDatabaseImplementation(new JdbcConnection(connection)));
+            Liquibase li=new Liquibase("C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\src\main\resources\changelog.xml",new ClassLoaderResourceAccessor(), DatabaseFactory.getInstance().findCorrectDatabaseImplementation(new JdbcConnection(connection)));
             li.update();
            
         } catch (Exception e) {
