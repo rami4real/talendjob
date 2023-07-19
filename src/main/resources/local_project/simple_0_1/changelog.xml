@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.10.xsd"
+                   logicalFilePath="C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\src\main\resources">
+
+
+     <changeSet id="tt" author="rtrfvtt">
+        <comment>Modification de la table Employes</comment>
+<!--
+        <addColumn tableName="Employes">
+            <column name="salaire" type="DECIMAL(10,2)"/>
+        </addColumn>
+-->
+        <sql>
+            UPDATE Employes SET salaire = 321.00 WHERE nom = 'John Doe';
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>
