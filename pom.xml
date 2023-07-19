@@ -9,7 +9,6 @@
     <version>0.1.0</version>
     <name>LOCAL_PROJECT simple-0.1.0 (0.1,Jobs)</name>
     <properties>
-        <!-- Existing properties -->
     </properties>
     <dependencies>
         <dependency>
