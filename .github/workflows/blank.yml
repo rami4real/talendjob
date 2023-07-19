@@ -13,5 +13,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Compile and Run Java Code
         run: |
-          javac -cp "C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\lib/*" "C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\src\main\java\local_project\simple_0_1"
+          javac -cp "C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\lib/*" "C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\src\main\java\local_project\simple_0_1\simple.java"
           java -cp "C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\lib/*;." local_project.simple_0_1.simple
