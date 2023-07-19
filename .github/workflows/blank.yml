@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Adjust file permissions
+        run: |
+          chmod +r "C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\src\main\resources\changelog.xml"
       - name: Compile and Run Java Code
         run: |
           cd "C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1\src\main\java"
