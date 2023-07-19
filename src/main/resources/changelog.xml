@@ -14,7 +14,7 @@
         </addColumn>
 -->
         <sql>
-            UPDATE Employes SET salaire = 50.00 WHERE nom = 'John Doe';
+            UPDATE Employes SET salaire = 10.00 WHERE nom = 'John Doe';
         </sql>
     </changeSet>
 
