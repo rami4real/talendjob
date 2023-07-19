@@ -12,9 +12,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Build with Maven
-        run: buildJob MyJob -dd "C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1" -af MyJob_0.1 -jc Default -jv 0.1
-
-
       - name: Execute Talend job
-        run: ./simple/simple_run.bat
+        run: ./simple/simple_run.sh -jc Default -jv 0.1 -f C:\Program Files (x86)\TOS_DI-8.0.1\studio\workspace\LOCAL_PROJECT\poms\jobs\process\demo\simple_0.1
