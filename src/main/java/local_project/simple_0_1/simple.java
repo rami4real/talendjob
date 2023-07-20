@@ -166,8 +166,6 @@ public class simple implements TalendJob {
 	private final java.util.Map<String, Boolean> ok_Hash = new java.util.HashMap<String, Boolean>();
 	public final java.util.List<String[]> globalBuffer = new java.util.ArrayList<String[]>();
 
-	private RunStat runStat = new RunStat();
-
 	// OSGi DataSource
 	private final static String KEY_DB_DATASOURCES = "KEY_DB_DATASOURCES";
 
@@ -419,7 +417,7 @@ public class simple implements TalendJob {
 				String dbUser_tDBConnection_1 = "sa";
 
 				final String decryptedPassword_tDBConnection_1 = routines.system.PasswordEncryptUtil
-						.decryptPassword("enc:routine.encryption.key.v1:SP9k3SEXw1r1dk8zS5KwGjbkMGo/8j6ya3dX6FRejx8=");
+						.decryptPassword("enc:routine.encryption.key.v1:pKFwXymiMssCZjiXy5qt2PFQwfal1koq9Fvm9XcCXDE=");
 				String dbPwd_tDBConnection_1 = decryptedPassword_tDBConnection_1;
 
 				java.sql.Connection conn_tDBConnection_1 = null;
@@ -501,8 +499,6 @@ public class simple implements TalendJob {
 
 			throw te;
 		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
 
 			throw error;
 		} finally {
@@ -763,10 +759,6 @@ public class simple implements TalendJob {
 
 				currentComponent = "tLogRow_1";
 
-				if (execStat) {
-					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row2");
-				}
-
 				int tos_count_tLogRow_1 = 0;
 
 				///////////////////////
@@ -790,10 +782,6 @@ public class simple implements TalendJob {
 				start_Hash.put("tJava_1", System.currentTimeMillis());
 
 				currentComponent = "tJava_1";
-
-				if (execStat) {
-					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row1");
-				}
 
 				int tos_count_tJava_1 = 0;
 
@@ -832,7 +820,7 @@ public class simple implements TalendJob {
 				int limit_tFileInputDelimited_1 = -1;
 				try {
 
-					Object filename_tFileInputDelimited_1 = "C:/Program Files (x86)/TOS_DI-8.0.1/studio/workspace/LOCAL_PROJECT/poms/jobs/process/demo/simple_0.1/src/main/java/local_project/simple_0_1/changelog.xml";
+					Object filename_tFileInputDelimited_1 = "C:/Program Files (x86)/TOS_DI-8.0.1/studio/workspace/LOCAL_PROJECT/poms/jobs/process/demo/simple_0.1/src/main/resources/changelog.xml";
 					if (filename_tFileInputDelimited_1 instanceof java.io.InputStream) {
 
 						int footer_value_tFileInputDelimited_1 = 0, random_value_tFileInputDelimited_1 = -1;
@@ -844,7 +832,7 @@ public class simple implements TalendJob {
 					}
 					try {
 						fid_tFileInputDelimited_1 = new org.talend.fileprocess.FileInputDelimited(
-								"C:/Program Files (x86)/TOS_DI-8.0.1/studio/workspace/LOCAL_PROJECT/poms/jobs/process/demo/simple_0.1/src/main/java/local_project/simple_0_1/changelog.xml",
+								"C:/Program Files (x86)/TOS_DI-8.0.1/studio/workspace/LOCAL_PROJECT/poms/jobs/process/demo/simple_0.1/src/main/resources/changelog.xml",
 								"ISO-8859-15", ";", "\n", true, 0, 0, limit_tFileInputDelimited_1, -1, false);
 					} catch (java.lang.Exception e) {
 						globalMap.put("tFileInputDelimited_1_ERROR_MESSAGE", e.getMessage());
@@ -911,14 +899,6 @@ public class simple implements TalendJob {
 
 							currentComponent = "tJava_1";
 
-							if (execStat) {
-								runStat.updateStatOnConnection(iterateId, 1, 1
-
-										, "row1"
-
-								);
-							}
-
 							row2 = row1;
 
 							tos_count_tJava_1++;
@@ -942,14 +922,6 @@ public class simple implements TalendJob {
 							 */
 
 							currentComponent = "tLogRow_1";
-
-							if (execStat) {
-								runStat.updateStatOnConnection(iterateId, 1, 1
-
-										, "row2"
-
-								);
-							}
 
 ///////////////////////		
 
@@ -1027,7 +999,7 @@ public class simple implements TalendJob {
 
 					}
 				} finally {
-					if (!((Object) ("C:/Program Files (x86)/TOS_DI-8.0.1/studio/workspace/LOCAL_PROJECT/poms/jobs/process/demo/simple_0.1/src/main/java/local_project/simple_0_1/changelog.xml") instanceof java.io.InputStream)) {
+					if (!((Object) ("C:/Program Files (x86)/TOS_DI-8.0.1/studio/workspace/LOCAL_PROJECT/poms/jobs/process/demo/simple_0.1/src/main/resources/changelog.xml") instanceof java.io.InputStream)) {
 						if (fid_tFileInputDelimited_1 != null) {
 							fid_tFileInputDelimited_1.close();
 						}
@@ -1051,10 +1023,6 @@ public class simple implements TalendJob {
 
 				currentComponent = "tJava_1";
 
-				if (execStat) {
-					runStat.updateStat(resourceMap, iterateId, 2, 0, "row1");
-				}
-
 				ok_Hash.put("tJava_1", true);
 				end_Hash.put("tJava_1", System.currentTimeMillis());
 
@@ -1074,10 +1042,6 @@ public class simple implements TalendJob {
 
 ///////////////////////    			
 
-				if (execStat) {
-					runStat.updateStat(resourceMap, iterateId, 2, 0, "row2");
-				}
-
 				ok_Hash.put("tLogRow_1", true);
 				end_Hash.put("tLogRow_1", System.currentTimeMillis());
 
@@ -1093,8 +1057,6 @@ public class simple implements TalendJob {
 
 			throw te;
 		} catch (java.lang.Error error) {
-
-			runStat.stopThreadStat();
 
 			throw error;
 		} finally {
@@ -1230,8 +1192,6 @@ public class simple implements TalendJob {
 			throw te;
 		} catch (java.lang.Error error) {
 
-			runStat.stopThreadStat();
-
 			throw error;
 		} finally {
 
@@ -1353,16 +1313,6 @@ public class simple implements TalendJob {
 			isChildJob = true;
 		}
 
-		if (portStats != null) {
-			// portStats = -1; //for testing
-			if (portStats < 0 || portStats > 65535) {
-				// issue:10869, the portStats is invalid, so this client socket can't open
-				System.err.println("The statistics socket port " + portStats + " is invalid.");
-				execStat = false;
-			}
-		} else {
-			execStat = false;
-		}
 		boolean inOSGi = routines.system.BundleUtils.inOSGi();
 
 		if (inOSGi) {
@@ -1436,17 +1386,6 @@ public class simple implements TalendJob {
 		resumeUtil.addLog("JOB_STARTED", "JOB:" + jobName, parent_part_launcher, Thread.currentThread().getId() + "",
 				"", "", "", "", resumeUtil.convertToJsonText(context, parametersToEncrypt));
 
-		if (execStat) {
-			try {
-				runStat.openSocket(!isChildJob);
-				runStat.setAllPID(rootPid, fatherPid, pid, jobName);
-				runStat.startThreadStat(clientHost, portStats);
-				runStat.updateStatOnJob(RunStat.JOBSTART, fatherNode);
-			} catch (java.io.IOException ioException) {
-				ioException.printStackTrace();
-			}
-		}
-
 		java.util.concurrent.ConcurrentHashMap<Object, Object> concurrentHashMap = new java.util.concurrent.ConcurrentHashMap<Object, Object>();
 		globalMap.put("concurrentHashMap", concurrentHashMap);
 
@@ -1510,10 +1449,6 @@ public class simple implements TalendJob {
 			System.out.println((endUsedMemory - startUsedMemory) + " bytes memory increase when running : simple");
 		}
 
-		if (execStat) {
-			runStat.updateStatOnJob(RunStat.JOBEND, fatherNode);
-			runStat.stopThreadStat();
-		}
 		int returnCode = 0;
 
 		if (errorCode == null) {
@@ -1661,6 +1596,6 @@ public class simple implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 49136 characters generated by Talend Open Studio for Data Integration on the
- * 19 juillet 2023 à 19:37:26 GMT+01:00
+ * 47356 characters generated by Talend Open Studio for Data Integration on the
+ * 20 juillet 2023 à 18:18:03 GMT+01:00
  ************************************************************************************************/
