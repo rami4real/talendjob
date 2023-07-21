@@ -14,4 +14,4 @@ jobs:
 
       - name: Execute Talend job
         run: |
-          ./src/simple/simple_run.sh 
+          ./src/simple/simple_run.bat
