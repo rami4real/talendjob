@@ -63,6 +63,12 @@ import java.sql.Statement;
 	//the import part of tLibraryLoad_2
 	//import java.util.List;
 
+	//the import part of tLibraryLoad_1
+	//import java.util.List;
+
+	//the import part of tLibraryLoad_3
+	//import java.util.List;
+
 
 @SuppressWarnings("unused")
 
@@ -347,6 +353,24 @@ private class TalendException extends Exception {
 					tDBConnection_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tLibraryLoad_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tLibraryLoad_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tLibraryLoad_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tLibraryLoad_3_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tFileInputDelimited_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
@@ -358,6 +382,16 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tDBConnection_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tLibraryLoad_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tLibraryLoad_3_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -1527,7 +1561,7 @@ public void tDBConnection_1Process(final java.util.Map<String, Object> globalMap
 	
 	
 		 
-	final String decryptedPassword_tDBConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:cluDO5zmAc5s3ueUZtoCR6Q+GikTV9+rLWDovoDzrPg=");
+	final String decryptedPassword_tDBConnection_1 = routines.system.PasswordEncryptUtil.decryptPassword("enc:routine.encryption.key.v1:rPWVv2EWgVmgGr645v42bhCrayI7V9AzcBDpprN6HX4=");
 		String dbPwd_tDBConnection_1 = decryptedPassword_tDBConnection_1;
 	
 	
@@ -1697,6 +1731,392 @@ end_Hash.put("tDBConnection_1", System.currentTimeMillis());
 		
 
 		globalMap.put("tDBConnection_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tLibraryLoad_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tLibraryLoad_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+
+
+	
+	/**
+	 * [tLibraryLoad_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tLibraryLoad_1", false);
+		start_Hash.put("tLibraryLoad_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tLibraryLoad_1";
+
+	
+		int tos_count_tLibraryLoad_1 = 0;
+		
+
+
+
+
+ 
+
+
+
+/**
+ * [tLibraryLoad_1 begin ] stop
+ */
+	
+	/**
+	 * [tLibraryLoad_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLibraryLoad_1";
+
+	
+
+ 
+
+
+	tos_count_tLibraryLoad_1++;
+
+/**
+ * [tLibraryLoad_1 main ] stop
+ */
+	
+	/**
+	 * [tLibraryLoad_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLibraryLoad_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tLibraryLoad_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tLibraryLoad_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLibraryLoad_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tLibraryLoad_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tLibraryLoad_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLibraryLoad_1";
+
+	
+
+ 
+
+ok_Hash.put("tLibraryLoad_1", true);
+end_Hash.put("tLibraryLoad_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tLibraryLoad_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tLibraryLoad_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLibraryLoad_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tLibraryLoad_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tLibraryLoad_1_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tLibraryLoad_3Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tLibraryLoad_3_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+
+
+	
+	/**
+	 * [tLibraryLoad_3 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tLibraryLoad_3", false);
+		start_Hash.put("tLibraryLoad_3", System.currentTimeMillis());
+		
+	
+	currentComponent="tLibraryLoad_3";
+
+	
+		int tos_count_tLibraryLoad_3 = 0;
+		
+
+
+
+
+ 
+
+
+
+/**
+ * [tLibraryLoad_3 begin ] stop
+ */
+	
+	/**
+	 * [tLibraryLoad_3 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLibraryLoad_3";
+
+	
+
+ 
+
+
+	tos_count_tLibraryLoad_3++;
+
+/**
+ * [tLibraryLoad_3 main ] stop
+ */
+	
+	/**
+	 * [tLibraryLoad_3 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLibraryLoad_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tLibraryLoad_3 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tLibraryLoad_3 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLibraryLoad_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tLibraryLoad_3 process_data_end ] stop
+ */
+	
+	/**
+	 * [tLibraryLoad_3 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLibraryLoad_3";
+
+	
+
+ 
+
+ok_Hash.put("tLibraryLoad_3", true);
+end_Hash.put("tLibraryLoad_3", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tLibraryLoad_3 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tLibraryLoad_3 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tLibraryLoad_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tLibraryLoad_3 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tLibraryLoad_3_SUBPROCESS_STATE", 1);
 	}
 	
     public String resuming_logs_dir_path = null;
@@ -1939,6 +2359,24 @@ globalMap.put("tDBConnection_1_SUBPROCESS_STATE", -1);
 e_tDBConnection_1.printStackTrace();
 
 }
+try {
+errorCode = null;tLibraryLoad_1Process(globalMap);
+if(!"failure".equals(status)) { status = "end"; }
+}catch (TalendException e_tLibraryLoad_1) {
+globalMap.put("tLibraryLoad_1_SUBPROCESS_STATE", -1);
+
+e_tLibraryLoad_1.printStackTrace();
+
+}
+try {
+errorCode = null;tLibraryLoad_3Process(globalMap);
+if(!"failure".equals(status)) { status = "end"; }
+}catch (TalendException e_tLibraryLoad_3) {
+globalMap.put("tLibraryLoad_3_SUBPROCESS_STATE", -1);
+
+e_tLibraryLoad_3.printStackTrace();
+
+}
 
 this.globalResumeTicket = true;//to run tPostJob
 
@@ -2126,6 +2564,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     49076 characters generated by Talend Open Studio for Data Integration 
- *     on the 21 juillet 2023 à 10:02:48 GMT+01:00
+ *     56332 characters generated by Talend Open Studio for Data Integration 
+ *     on the 21 juillet 2023 à 10:19:34 GMT+01:00
  ************************************************************************************************/
